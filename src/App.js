@@ -6,14 +6,16 @@ import { PostForm } from './PostForm';
 import Navbar from './Navbar';
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/postForm" element={<PostForm />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/postForm" element={<PostForm />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

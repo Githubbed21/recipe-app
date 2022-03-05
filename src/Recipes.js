@@ -17,7 +17,6 @@ export default function Recipes() {
   }, []);
 
   const change = (e) => {
-    console.log(e.target.value);
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
