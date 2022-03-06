@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Recipes.css';
+import '../Styles/Recipes.css';
 import RecipeCard from './RecipeCard';
 
 const initialFormValues = {
@@ -36,7 +36,6 @@ export default function Recipes() {
         return recipe.meal === meal;
       } else {
         let recipeTitle = recipe.title.toLowerCase();
-        // let test = meal;
         if (meal === 'All') {
           return recipeTitle.includes(title);
         }

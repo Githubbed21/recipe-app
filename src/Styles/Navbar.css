@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+.NavBar {
+  background-color: aliceblue;
+  padding: 2%;
+  display: flex;
+  justify-content: space-evenly;
+}

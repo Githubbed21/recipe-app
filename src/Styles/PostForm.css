@@ -1,3 +1,9 @@
 PostForm {
   background-image: linear-gradient(to top, #e14fad 0%, #fcf93f 100%);
 }
+.Recipe-add {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+}

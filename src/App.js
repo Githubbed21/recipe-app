@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './Home';
-import Recipes from './Recipes';
-import { PostForm } from './PostForm';
-import Navbar from './Navbar';
+import './Styles/App.css';
+import Home from './Components/Home';
+import Recipes from './Components/Recipes';
+import { PostForm } from './Components/PostForm';
+import Navbar from './Components/Navbar';
 function App() {
   return (
     <div className="App">

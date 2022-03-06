@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RecipeCard.css';
+import '../Styles/RecipeCard.css';
 
 export default function RecipeCard({ recipe }) {
   const [isOpen, setIsOpen] = useState(false);
