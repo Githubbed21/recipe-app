@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/PostForm.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const initialFormValues = {
   title: '',
@@ -19,14 +20,9 @@ export const PostForm = () => {
   const addRecipe = (e) => {
     e.preventDefault();
 
-    const directionsArray = formValues.directions.split('\n');
+    formValues.id = uuidv4();
+    formValues.directions = formValues.directions.split('\n');
 
-    setFormValues({
-      ...formValues,
-      ['directions']: directionsArray,
-    });
-
-    console.log(directionsArray);
     console.log(formValues);
     setFormValues(initialFormValues);
   };
