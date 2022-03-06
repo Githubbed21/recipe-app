@@ -20,6 +20,11 @@ export default function Recipes() {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
+  const filter = (e) => {
+    e.preventDefault();
+    console.log(formValues);
+  };
+
   if (!recipes) {
     return <h3>Loading...</h3>;
   }
@@ -27,7 +32,7 @@ export default function Recipes() {
   return (
     <div className="Recipes">
       <h2>recipes</h2>
-      <form>
+      <form onSubmit={filter}>
         <input
           type="text"
           name="title"
@@ -35,15 +40,14 @@ export default function Recipes() {
           onChange={change}
           value={formValues.title}
         />
-        <label>
-          Choose a Meal!
-          <input list="recipes" name="Meals" />
-        </label>
-        <datalist>
-          <option value="Breakfast" />
-          <option value="Lunch" />
-          <option value="Dinner" />
-        </datalist>
+        <label htmlFor="meal">Choose a Meal!</label>
+        <select name="meal" id="meal" onChange={change}>
+          <option value="All">All meals</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+        </select>
+        <input type="submit" value="Search" />
       </form>
       {recipes.map((recipe) => {
         return (
