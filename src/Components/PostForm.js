@@ -23,7 +23,21 @@ export const PostForm = () => {
     formValues.id = uuidv4();
     formValues.directions = formValues.directions.split('\n');
 
-    console.log(formValues);
+    fetch('http://localhost:3001/Recipes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formValues),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((err) => {
+        console.error('Error:', err);
+      });
+
     setFormValues(initialFormValues);
   };
 

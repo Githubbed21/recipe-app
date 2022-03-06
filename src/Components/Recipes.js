@@ -19,7 +19,7 @@ export default function Recipes() {
         setRecipes(data);
         setDisplayedRecipes(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }, []);
 
   const change = (e) => {
