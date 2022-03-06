@@ -1,0 +1,30 @@
+.results-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 24px 24px;
+  margin: 32px auto;
+  background: lightgreen;
+}
+
+.recipe {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.recipe-card {
+  cursor: pointer;
+  flex-shrink: 0;
+  flex-basis: 300px;
+  margin-right: 32px;
+}
+
+.recipe-directions {
+  flex-grow: 1;
+}
+
+.recipe-step {
+  text-align: left;
+  flex-basis: auto;
+}

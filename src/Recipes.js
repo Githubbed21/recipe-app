@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Recipes.css';
 
 const initialFormValues = {
   title: '',
@@ -26,15 +27,22 @@ export default function Recipes() {
 
   const filter = (e) => {
     e.preventDefault();
-    const { title, meal } = formValues;
-    console.log(formValues);
+    let { title, meal } = formValues;
+    title = title.toLowerCase();
 
-    if (meal === 'All') {
-      setDisplayedRecipes(recipes);
-      return;
-    }
+    const filtered = recipes.filter((recipe) => {
+      if (title === '') {
+        return recipe.meal === meal;
+      } else {
+        let recipeTitle = recipe.title.toLowerCase();
+        let test = meal;
+        if (meal === 'All') {
+          test = recipe.meal;
+        }
+        return recipeTitle.includes(title) && recipe.meal === test;
+      }
+    });
 
-    const filtered = recipes.filter((recipe) => recipe.meal === meal);
     setDisplayedRecipes(filtered);
   };
 
@@ -63,14 +71,29 @@ export default function Recipes() {
         </select>
         <input type="submit" value="Search" />
       </form>
-      {displayedRecipes.map((recipe) => {
-        return (
+      <div className="results-container">
+        {displayedRecipes.length === 0 ? (
           <div>
-            <h3>{recipe.title}</h3>
-            <img src={recipe.image} alt=" 😋 " />
+            <h3>No results found</h3>
           </div>
-        );
-      })}
+        ) : (
+          displayedRecipes.map((recipe) => {
+            return (
+              <div key={recipe.id} className="recipe">
+                <div class="recipe-card">
+                  <h3>{recipe.title}</h3>
+                  <img src={recipe.image} alt="😋" />
+                </div>
+                <ol className="recipe-directions">
+                  {recipe.directions.map((step) => (
+                    <li className="recipe-step">{step}</li>
+                  ))}
+                </ol>
+              </div>
+            );
+          })
+        )}
+      </div>
     </div>
   );
 }
