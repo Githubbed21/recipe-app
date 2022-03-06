@@ -32,15 +32,15 @@ export default function Recipes() {
     title = title.toLowerCase();
 
     const filtered = recipes.filter((recipe) => {
-      if (title === '') {
+      if (title === '' && meal !== 'All') {
         return recipe.meal === meal;
       } else {
         let recipeTitle = recipe.title.toLowerCase();
-        let test = meal;
+        // let test = meal;
         if (meal === 'All') {
-          test = recipe.meal;
+          return recipeTitle.includes(title);
         }
-        return recipeTitle.includes(title) && recipe.meal === test;
+        return recipeTitle.includes(title) && recipe.meal === meal;
       }
     });
 
@@ -53,7 +53,7 @@ export default function Recipes() {
 
   return (
     <div className="Recipes">
-      <h2>recipes</h2>
+      <h2>Recipes</h2>
       <form onSubmit={filter} className="recipe-search">
         <input
           type="text"
