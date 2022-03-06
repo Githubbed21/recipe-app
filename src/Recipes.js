@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Recipes.css';
+import RecipeCard from './RecipeCard';
 
 const initialFormValues = {
   title: '',
@@ -53,16 +54,17 @@ export default function Recipes() {
   return (
     <div className="Recipes">
       <h2>recipes</h2>
-      <form onSubmit={filter}>
+      <form onSubmit={filter} className="recipe-search">
         <input
           type="text"
           name="title"
           placeholder="Search Title"
           onChange={change}
+          className="title-input"
           value={formValues.title}
         />
         <label htmlFor="meal">Choose a Meal!</label>
-        <select name="meal" id="meal" onChange={change}>
+        <select name="meal" id="meal" onChange={change} className="meal-input">
           <option value="All">All meals</option>
           <option value="Breakfast">Breakfast</option>
           <option value="Lunch">Lunch</option>
@@ -78,19 +80,7 @@ export default function Recipes() {
           </div>
         ) : (
           displayedRecipes.map((recipe) => {
-            return (
-              <div key={recipe.id} className="recipe">
-                <div class="recipe-card">
-                  <h3>{recipe.title}</h3>
-                  <img src={recipe.image} alt="😋" />
-                </div>
-                <ol className="recipe-directions">
-                  {recipe.directions.map((step) => (
-                    <li className="recipe-step">{step}</li>
-                  ))}
-                </ol>
-              </div>
-            );
+            return <RecipeCard key={recipe.id} recipe={recipe} />;
           })
         )}
       </div>
