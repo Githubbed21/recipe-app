@@ -4,9 +4,9 @@ import '../Styles/Navbar.css';
 
 export default function Navbar() {
   return (
-    <div className='NavBar'>
+    <div className="NavBar">
       <Link to="/">Home</Link>
-      <Link to="/postForm"> postForm</Link>
+      <Link to="/postForm"> Share your Dish</Link>
       <Link to="/recipes"> Recipes</Link>
     </div>
   );
