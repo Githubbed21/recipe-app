@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Dinner Bell
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The future of your cooking as arrived!
 
 ## Available Scripts
 
@@ -12,55 +12,31 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the JSON server simply type `npm run server` into a separate terminal. The server directory is pre-written into the scripts section of the code for simplicity reasons.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Description
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- This is a react app that allows a user to search through out JSON database for recipes. The use can search using key meals such as breakfast, lunch or dinner. The user can also search a more narrow scope and enter in a name of meal where the code will filter out anything that doesn't match the requested name and only show the ones that match.
 
-## Learn More
+- A user can feel free to share their own recipes with the world by simply selecting the "Share a Recipe" route. The page will reload and display a section where they can
+- enter the name of their meal
+- select the corresponding meal of the day from a drop down box
+- input the directions to make the meal
+- import a image of the meal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+One the user submit their recipe it will automatically be saved into our JSON date and rendered right into the recipes page!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributors
 
-### Code Splitting
+link to the GitHub repository <https://github.com/Githubbed21/recipe-app>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-Dean Diaz <diazdean21@gmail.com>
 
-### Analyzing the Bundle Size
+## License & Copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-npm run server to launch the db.json file
+© Dean Diaz , flatiron school.
