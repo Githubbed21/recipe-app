@@ -84,6 +84,10 @@ export const PostForm = () => {
           value={formValues.originalURL}
         />
         <input type="submit" value="Submit" />
+        <img
+          src="https://foodtank.com/wp-content/uploads/2022/02/Food-Tank-Food-and-Food-System-Documentaries-1.jpg"
+          alt="😋"
+        />
       </form>
     </div>
   );
