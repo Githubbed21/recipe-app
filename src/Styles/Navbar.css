@@ -8,6 +8,7 @@ a:hover {
 }
 .NavBar {
   background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
   padding: 2%;
   display: flex;
   justify-content: space-evenly;
