@@ -62,7 +62,7 @@ export default function Recipes() {
           className="title-input"
           value={formValues.title}
         />
-        <label htmlFor="meal">Choose a Meal!</label>
+        <label htmlFor="meal"></label>
         <select name="meal" id="meal" onChange={change} className="meal-input">
           <option value="All">All meals</option>
           <option value="Breakfast">Breakfast</option>
