@@ -23,13 +23,14 @@ To run the JSON server simply type `npm run server` into a separate terminal. Th
 
 - This is a react app that allows a user to search through out JSON database for recipes. The use can search using key meals such as breakfast, lunch or dinner. The user can also search a more narrow scope and enter in a name of meal where the code will filter out anything that doesn't match the requested name and only show the ones that match.
 
-- A user can feel free to share their own recipes with the world by simply selecting the "Share a Recipe" route. The page will reload and display a section where they can
-- enter the name of their meal
-- select the corresponding meal of the day from a drop down box
-- input the directions to make the meal
-- import a image of the meal
+A user can feel free to share their own recipes with the world by simply selecting the "Share a Recipe" route. The page will reload and display a section where they can...
 
-One the user submit their recipe it will automatically be saved into our JSON date and rendered right into the recipes page!
+- Enter the name of their meal.
+- Select the corresponding meal of the day from a drop down box.
+- Input the directions to make the meal.
+- Import a image of the meal.
+
+Once the user submits their recipe, it will automatically be saved into our JSON date and rendered right into the recipes page!
 
 ## Contributors
 
