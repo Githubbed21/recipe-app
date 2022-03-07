@@ -15,6 +15,7 @@ export default function Home() {
           their love of cooking with us and it is our pleasure to share it with
           you!
         </h3>
+
         <h3 className="search-description">
           Looking for something new? Simply select Recipes to have a look
           through our collection! We here at Dinner Bell like to experience the
@@ -23,10 +24,11 @@ export default function Home() {
           cooking but culture from which the meal came.
         </h3>
       </p>
-      <img
+
+      {/* <img
         src="https://t3.ftcdn.net/jpg/03/07/25/60/400_F_307256093_I8qlofSMsp8E9qK1MO7lwmB5ejd01t19.jpg"
         alt="😋"
-      />
+      /> */}
     </div>
   );
 }
